@@ -1,0 +1,12 @@
+﻿.product-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    justify-content: center
+}

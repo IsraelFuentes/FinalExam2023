@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Products>
+@{
+    ViewData["Title"] = "Home Page";
+}
+@if (TempData["success"] != null)
+{
+    <h1>@TempData["success"]</h1>
+}
+else
+{
+    <h1>@TempData["failed"]</h1>
+}
+<!-- Section-->
+<section class="py-5">
+    <div class="product-container">
+        @foreach(var prod in Model)
+        {
+            <div >
+                <div class="product">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">@prod.NameOfProduct</h5>
+                                <!-- Product price-->
+                                <p>@prod.Price.ToString("C")</p>
+                                <p>@prod.Description</p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                        </div>
+                    </div>
+                </div>
+                @*//*@
+            </div>
+        }
+        
+    </div>
+</section>
+<style>
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+    }
+</style>
